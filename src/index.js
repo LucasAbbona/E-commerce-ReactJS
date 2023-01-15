@@ -3,17 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Cart from './components/CartWidget'
-import NavBar from './components/NavBar';
-import './components/styles.css';
-import Landing from './components/ItemListContainer';
+import Landing from './pages/Landing/Landing';
+import Cart from './components/NavBar/CartWidget/CartWidget'
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
+  <BrowserRouter>
   <NavBar />
-  <Landing brand={"Luxury House"}/>
-  </>
+  <Routes>
+    <Route path='/' element={<Landing brand={"Luxury House"}/>}/>
+    <Route path='/category/:category' element={<ItemListContainer />}/>
+    <Route path="item/:id" element={<ItemDetailContainer />} />
+    <Route path='/cart' />
+    <Route path='/checkout' />
+  </Routes>
+  </BrowserRouter>
   
 );
 

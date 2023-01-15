@@ -1,0 +1,27 @@
+.productContainer{
+    width: 80%;
+    margin-inline: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 250px;
+    padding-inline: 10%;
+}
+.SingleInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.Volver{
+    position: absolute;
+    left: 70px;
+    top: 125px;
+    font-size: 18px;
+    color: #222831;
+}
+.Volver:hover{
+    color: #FFD369;
+}

@@ -1,0 +1,65 @@
+@import url('https://fonts.cdnfonts.com/css/monastic');
+@import url(//db.onlinewebfonts.com/c/b461b7ace66f0d83a3146b642ad9baff?family=Le+Jeune+Deck);
+.Imagen{
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 150px;
+}
+.Imagen h2{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.603);
+    top: 70px;
+    color: white;
+    z-index: 2000;
+    font-family: "Le Jeune Deck";
+}
+.Imagen div{
+    background-color: rgba(0, 0, 0, 0.308);
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    position: absolute;
+    top: 0;
+}
+.Imagen img{
+    width: 100%;
+}
+.FMen{
+    z-index: 2000;
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    background-color: #393E46;
+    color: #FFD369;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Monastic', sans-serif;
+    font-weight: 800;
+    bottom: 120px;
+    left: 150px;
+}
+.FWomen{
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    background-color: #393E46;
+    color: #FFD369;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Monastic', sans-serif;
+    font-weight: 800;
+    bottom: 120px;
+    right: 150px;
+    z-index: 2000;
+}
+.FMen:hover, .FWomen:hover{
+    background-color: #35383d;
+    box-shadow: 0px 5px 8px black;
+}

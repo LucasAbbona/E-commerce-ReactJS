@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/monastic');
+@import url('https://fonts.cdnfonts.com/css/geomanist');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Geomanist', sans-serif;
+}
+.navegation{
+    background-color: #222831;
+    position: relative;
+    box-shadow: 0px 1px 8px #393E46;
+}
+.navegation_list{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-areas: "pages brand cart";
+    list-style: none;
+}
+.DropDowns{
+    grid-area: pages;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.DropDowns a{
+    font-family: 'Geomanist', sans-serif;
+}
+.DropDowns .categories{
+    font-family: 'Asap', sans-serif;
+}
+.navegation_list li a{
+    text-decoration: none;
+    color: #EEEEEE;
+    font-size: 18px;
+}
+.navegation_list li a:hover{
+    color: #FFD369;
+}
+.navegation_list li .bolsa{
+    position: relative;
+    font-size: 25px;
+    margin-right: 100px;
+}
+.navegation_list li .bolsa:hover{
+    color: #FFD369;
+}
+.Brand{
+    grid-area: brand;
+    width: 100%;
+    text-align: center;
+}
+.apagado{
+    display: none;
+    color: #EEEEEE;
+}
+.dspFl li{
+    color: #EEEEEE;
+}
+.dspFl{
+    display: flex;
+    flex-direction: column;
+    margin-left: -15px;
+    position: absolute;
+    bottom: -168px;
+    list-style: none;
+    gap: 20px;
+    background-color: #393E46;
+    padding: 10px;
+    z-index: 1000;
+}
+.Cart{
+    text-align: end;
+    align-self: center;
+    width: 100%;
+    grid-area: cart;
+}
+
+.carrito{
+    font-size: 16px;
+    position: absolute;
+    bottom: -8px;
+    border: 0.5px solid black;
+    padding-inline: 5px;
+    padding-block: -2px;
+    right: -10px;
+    color: black;
+    border-radius: 50%;
+    background-color: white;
+}
