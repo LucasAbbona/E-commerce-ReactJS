@@ -3,6 +3,7 @@ import '../ItemListContainer/ItemListContainer.css';
 import LandingVideo from '../../components/LandingVideo/Men/LandingVideo';
 import LandingVideoW from '../../components/LandingVideo/Women/LandingVideoW';
 import LandingAdvs from '../../components/LandingAdvs/LandingAdvs';
+import LandingSubscribe from '../../components/LandingSubscribe/LandingSubscribe';
 
 const Landing=({brand})=>{
 

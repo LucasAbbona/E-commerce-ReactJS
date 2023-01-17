@@ -8,6 +8,8 @@ import Cart from './components/NavBar/CartWidget/CartWidget'
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Footer from './components/Footer/Footer';
+import LandingSubscribe from './components/LandingSubscribe/LandingSubscribe';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +23,8 @@ root.render(
     <Route path='/cart' />
     <Route path='/checkout' />
   </Routes>
+  <LandingSubscribe />
+  <Footer />
   </BrowserRouter>
   
 );
