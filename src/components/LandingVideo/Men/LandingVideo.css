@@ -33,6 +33,7 @@
     cursor: pointer;
     font-family: 'Monastic', sans-serif;
     font-weight: 800;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .VideoBlur .Men:hover{
     background-color: #35393f;

@@ -1,0 +1,29 @@
+.CardContiner{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #393E46;
+}
+.CardContiner div p{
+    font-family: 'Old Standard TT', serif;
+    color: #FFD369;
+    font-size: 17px;
+}
+.CardContiner div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+.FeaturesImgContainer{
+    background-color: #222831;
+    width: 120px;
+    height: 110px;
+}
+.FeaturesImgContainer img{
+    width: 80%;
+}

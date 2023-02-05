@@ -21,7 +21,40 @@
     top: 125px;
     font-size: 18px;
     color: #222831;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .Volver:hover{
     color: #FFD369;
+}
+.añadir{
+    width: 100%;
+}
+.añadir button{
+    cursor: pointer;
+    color: white;
+    width: 230px;
+    font-size: 20px;
+    border:  none;
+    background-color: #222831;
+    height: 40px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.añadir button:hover{
+    background-color: #191c22;
+}
+.StockLeft{
+    font-size: 14px;
+    color: #393E46;
+}
+.GoToCartBtnLink{
+    width: 230px
+}
+.GoToCartBtn{
+    background-color: #222831;
+    color: white;
+    width: 230px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }

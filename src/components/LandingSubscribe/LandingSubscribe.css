@@ -26,6 +26,7 @@
     border: none;
     outline: none;
     font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .FormContainer button{
     width: 160px;
@@ -36,4 +37,14 @@
     font-family: 'Monastic', sans-serif;
     font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.FormContainer button:hover{
+    background-color: #282b30;
+}
+.FormContainer .cumple:focus{
+    outline: solid 1px green;
+}
+.FormContainer .nocumple:focus{
+    outline: solid 1px red;
 }

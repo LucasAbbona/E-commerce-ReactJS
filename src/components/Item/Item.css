@@ -26,6 +26,14 @@
 }
 .ProductImage{
     align-self: center;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ProductImage img{
+    width: 100%;
 }
 .ProductBack{
     background-color: #EEEEEE;
@@ -65,4 +73,9 @@
     color: white;
     border: none;
     font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.AddCart:hover{
+    background-color: #171a1f;
 }

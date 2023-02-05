@@ -1,35 +1,36 @@
-import { useState } from 'react';
 import './ItemCount.css'
-const ItemCount = () => {
-    const [contador, setcontador] = useState(0);
-    const stock = 10;
+import Swal from 'sweetalert2'
+
+const ItemCount = ({contador, Update, stock}) => {
     const restar= ()=>{
-        if(contador==0){
-            return alert("No se puede comprar menos de 0 productos");
+        if(contador<=1){
+            return Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `No se puede agregar 0 productos.`,
+            })
         }
-        setcontador(contador-1);
-            }
-    
+        Update(contador-1);
+    }
     const sumar = () =>{
         if(stock === contador){
-            return alert(`No se puede comprar mas de ${stock} productos`);
+            return Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `No se puede agregar mas de ${stock} productos.`,
+            })
         }
-        setcontador(contador+1);
-
-            }
+        Update(contador+1);
+    }
     
     return(
         <div className='contador'>
             <div>
-                <button className='boton' onClick={sumar}>+</button>
+                <button className='botonContador' onClick={sumar}>+</button>
             <span>{contador}</span>
-            <button className='boton' onClick={restar}>-</button>
+            <button className='botonContador' onClick={restar}>-</button>
             </div>
-            <div className='añadir'>
-                <button>Add</button>
-            </div>
-        </div>
-        
+        </div>    
     )
 }
 

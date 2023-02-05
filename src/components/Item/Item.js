@@ -1,5 +1,4 @@
 import './Item.css'
-
 const Item=({producto})=> {
 return (
     <ul className='ProductListContainer'>
@@ -7,8 +6,8 @@ return (
         <div className='ProductBack'>
         <li className='ProductName' key={producto.id}>{producto.title}</li>
         <li className='ProductPrice' key={producto.id}>${producto.price}</li>
-        <li className='ProductStock'>x lefts</li>
-        <button className='AddCart'>Add</button>
+        <li className='ProductStock'>{producto.stock} lefts</li>
+        <button className='AddCart'>More Info</button>
         </div>
     </ul>
 )

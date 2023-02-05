@@ -32,10 +32,14 @@
 .DropDowns .categories{
     font-family: 'Asap', sans-serif;
 }
+.DropDowns .active{
+    color: #FFD369;
+}
 .navegation_list li a{
     text-decoration: none;
     color: #EEEEEE;
     font-size: 18px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .navegation_list li a:hover{
     color: #FFD369;
@@ -44,6 +48,7 @@
     position: relative;
     font-size: 25px;
     margin-right: 100px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .navegation_list li .bolsa:hover{
     color: #FFD369;
@@ -90,4 +95,12 @@
     color: black;
     border-radius: 50%;
     background-color: white;
+}
+.CarritoLinkInner{
+    display: flex;
+    width: 125px;
+}
+.CarritoLink{
+    display: flex;
+    justify-content: end;
 }

@@ -43,6 +43,7 @@
     font-weight: 800;
     bottom: 120px;
     left: 150px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .FWomen{
     position: absolute;
@@ -58,6 +59,7 @@
     bottom: 120px;
     right: 150px;
     z-index: 2000;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .FMen:hover, .FWomen:hover{
     background-color: #35383d;

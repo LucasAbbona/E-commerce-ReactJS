@@ -27,6 +27,7 @@
     cursor: pointer;
     font-family: 'Old Standard TT', serif;
     font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .Links ul li:hover{
     color: #FFD369;
@@ -58,6 +59,7 @@ justify-content: space-around;
     cursor: pointer;
     width: 40px;
     height: 40px;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .Media:hover{
     background-color: #FFD369;

@@ -16,7 +16,7 @@
     width: 100%;
     text-align: center;
 }
-.boton{
+.botonContador{
     background-color: #393E46;
     color: white;
     border: none;
@@ -25,14 +25,8 @@
     height: 25px;
     font-size: 18px;
     font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
-.añadir button{
-    cursor: pointer;
-    color: white;
-    width: 100%;
-    font-size: 20px;
-    border:  none;
-    background-color: #222831;
-    height: 40px;
+.botonContador:hover{
+    background-color: #222429;
 }

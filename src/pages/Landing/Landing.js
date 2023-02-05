@@ -3,7 +3,6 @@ import '../ItemListContainer/ItemListContainer.css';
 import LandingVideo from '../../components/LandingVideo/Men/LandingVideo';
 import LandingVideoW from '../../components/LandingVideo/Women/LandingVideoW';
 import LandingAdvs from '../../components/LandingAdvs/LandingAdvs';
-import LandingSubscribe from '../../components/LandingSubscribe/LandingSubscribe';
 
 const Landing=({brand})=>{
 
@@ -22,7 +21,7 @@ const Landing=({brand})=>{
         <div className='landing_img'>
             <div id='landing_bg' className='landing_blur'>
                 <h2 className='landing_title'>Bienvenidos a {brand}</h2>
-                <Link to={'/category/all'}><button id='shop' onMouseOver={Shopping} onMouseLeave={LeavingShopBtn} className='landing_btn'>Shop Now</button></Link>
+                <Link to={'/category/'}><button id='shop' onMouseOver={Shopping} onMouseLeave={LeavingShopBtn} className='landing_btn'>Shop Now</button></Link>
             </div>
         </div>
         <LandingVideo/>
