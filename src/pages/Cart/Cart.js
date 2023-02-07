@@ -14,6 +14,7 @@ const Cart = () => {
             <p>Product Image</p>
             <p>Product</p>
             <p>Category</p>
+            <p>Talle</p>
             <p>Price</p>
             <p>Quantity</p>
             </div> : ""}
@@ -22,6 +23,7 @@ const Cart = () => {
                     <img src={producto.image} width={100}/>
                     <h3>{producto.name}</h3>
                     <p className="CartCat">{producto.category}</p>
+                    <p>{producto.talle}</p>
                     <p className="CartPric">${producto.price*producto.quantity}<small className="PerUnitPrice"> ${producto.price} Each</small></p>
                     <p className="CartQuant">{producto.quantity}</p>
                     <button className="CartDelete" onClick={()=>removeItem(producto.id)}>Eliminar</button>

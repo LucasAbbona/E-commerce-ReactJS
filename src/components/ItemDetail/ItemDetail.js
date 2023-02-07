@@ -9,7 +9,14 @@ function ItemDetail({producto}){
   const [contador, setcontador] = useState(1);
   const {addItem}=useContext(cartContext)
   const {InCart}=useContext(cartContext)
-
+  const [FormValue, SetForm]=useState(producto.title == "Zapatos" ? {
+    talla:"39"} : {talla:"S"})
+  const HandleInput=(event)=>{
+    SetForm({
+      [event.target.name]:event.target.value,
+    })
+  }
+  const productos={...producto,...FormValue}
   return (
     <>
     <Link to="/category/"><div className='Volver'>Volver</div></Link>
@@ -20,8 +27,27 @@ function ItemDetail({producto}){
         <div className='SingleInfo'>
         <h1>{producto.title}</h1>
         <p>{producto.description}</p>
+        {producto.title == "Zapatos" ? 
+        <>
+        <p>Elige tu talle</p>
+        <select name='talla' value={FormValue.talla} onChange={HandleInput}>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+        </select>
+        </> 
+        :
+        <>
+        <p>Elige tu talle</p>
+        <select name='talla' value={FormValue.talla} onChange={HandleInput}>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+        </select>
+        </>
+        }
         <h3>${producto.price}</h3>
-        {(InCart(producto.id)) ? 
+        {((InCart(productos.id))) ? 
         <>
         <p>El producto ya se encuentra en el carrito.</p>
         <Link className='GoToCartBtnLink' to={'/cart'}><button className='GoToCartBtn'><BsFillBagCheckFill /> Ir al Carrito</button></Link></> 
@@ -29,7 +55,7 @@ function ItemDetail({producto}){
         <>
         <ItemCount contador={contador} Update={setcontador} stock={producto.stock}/>
         <div className='añadir'>
-          <button onClick={()=>addItem(producto,contador)}>Add</button>
+          <button onClick={()=>addItem(productos,contador)}>Add</button>
         </div>
         </>}
         <p className='StockLeft'>{producto.stock} lefts.</p>

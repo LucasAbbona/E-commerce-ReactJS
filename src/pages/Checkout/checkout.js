@@ -23,6 +23,8 @@ const Checkout = () => {
             name: product.name,
             price:product.price,
             id:product.id,
+            talle:product.talle,
+            quantity:product.quantity
           }
         })),
         total: cart.reduce((acc,curr)=>acc+curr.price*curr.quantity,0),

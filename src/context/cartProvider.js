@@ -5,7 +5,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.js'
 const CartProvider = ({children}) => {
   const [cart,setCart]= useState([])
     const addItem=(item,quantity)=>{
-      const newProduct = {id: item.id,image: item.pictureUrl ,name: item.title, price: item.price, quantity: quantity, category: item.category,stock: item.stock }
+      const newProduct = {id: item.id,image: item.pictureUrl ,name: item.title, price: item.price, quantity: quantity, category: item.category,stock: item.stock,talle: item.talla }
       setCart([...cart,newProduct])
       Swal.fire(
         'Agregado',
@@ -21,7 +21,7 @@ const CartProvider = ({children}) => {
         setCart([]);
     }
     const InCart=(id)=>{
-      return cart.some((product)=> product.id === id)
+      return cart.some((product)=>product.id === id)
     }
 
   return (
