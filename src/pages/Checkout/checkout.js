@@ -7,6 +7,7 @@ import './checkout.css'
 
 const Checkout = () => {
   const [Validate,setValidate]=useState(false)
+  const [EmailConfirm,serConfirm]=useState(false)
   const [order,setOrder]=useState({})
   const [FormValue, setFormValue]=useState({
     name:"",
@@ -32,7 +33,12 @@ const Checkout = () => {
     },[])
 
     const Finish=(event)=>{
+    const nombre = FormValue.name
+    const tel = FormValue.phone  
+    nombre === "" ? setValidate(false) : tel === "" ? setValidate(false) : EmailConfirm === true ?  
+    setValidate(true) : setValidate(false)
     event.preventDefault();
+    if(Validate === true){
     const db=getFirestore();
     const QuerySnapshot=collection(db,'order');
     const currentOrder={
@@ -49,19 +55,20 @@ const Checkout = () => {
       UpdateProducts()
     })
     .catch((error)=>console.log(error))
-    }
-
-  const HandleInput=(event)=>{
+    }else{
+      console.log("no")
+    }}
+    const HandleInput=(event)=>{
     setFormValue({
       ...FormValue,
       [event.target.name]:event.target.value,
     })
   }
   const HandleInputValidation=(event)=>{
-    (FormValue.email === event.target.value) ? setValidate(true) : setValidate(false)
+    (FormValue.email === event.target.value) ? serConfirm(true) : serConfirm(false)
   }
   const UpdateProducts=()=>{
-    cart.forEach((product)=>{
+    cart.forEach((product)=>{  
       const db=getFirestore();
       const QuerySnapshot=doc(db,'products',product.id);
       updateDoc(QuerySnapshot,{
@@ -97,12 +104,7 @@ const Checkout = () => {
         <input type="text" onKeyUp={HandleInputValidation}/>
       </div>
       <div className='CheckOutBtns'>
-        {(Validate === true) ?
         <button onClick={Finish} type="submit">Finalizar Compra</button>
-        : 
-        <button disabled type="submit">Finalizar Compra</button>
-        }
-        
         <Link to={'/cart'}><button>Cancelar</button></Link>
       </div>
       </form>
